@@ -1,0 +1,13 @@
+
+
+Nav #Navbar-navbar{
+    background-color: blue;
+
+}
+.navbar-toggler{
+    outline: none;
+    box-shadow: none;
+}
+#Navbar-navbar{
+    background-color: brown;
+}
