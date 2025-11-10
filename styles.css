@@ -1,13 +1,132 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+img{
+    max-width: 100%;
+    
+}
+ a{
 
-Nav #Navbar-navbar{
-    background-color: blue;
+    color: aquamarine;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+    text-decoration: none;
 
 }
-.navbar-toggler{
-    outline: none;
-    box-shadow: none;
+.text-primary{
+    color: brown;
 }
-#Navbar-navbar{
-    background-color: brown;
+.text-dark{
+    color: cadetblue;
+}
+/* header */
+
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: transparent;
+    transition: 0.3s background;
+
+}
+.main-header .nabar{
+    padding: 15px 0;
+}
+
+.main-header .navbar-nav > li{
+    padding: 0 10px;
+}
+/* navlink */
+.main-header .navbar-nav > li > .nav-link{
+    padding: 0 5px;
+    line-height: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+    color: chocolate;
+}
+
+.main-header .navbar-nav > li > .nav-link:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: ease all 0.3s;
+
+
+}
+.main-header .navbar-nav > li > .nav-link:hover{
+    color: black;
+
+}
+.main-header .navbar-nav > li > .nav-link:hover:after{
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+@media (max-width: 991px){
+    .main-header .navbar-collapse {
+        border-top: 2px solid black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+    }
+    .main-header .navbar-nav > li {
+        border-top: 1px solid rgb(55,55,55, 0.1);
+
+    }
+     .main-header .navbar-nav > li > .nav-link{
+        line-height: 50px;
+     }
+     .main-header .navbar-nav > li > .nav-link::after{
+        display: none;
+     } 
+     .main-header .navbar-toggler{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 4px 9px ;
+        outline: none;
+        box-shadow: none;
+     }
+     .main-header .navbar-toggler span {
+        width: 25px;
+        height: 2px;
+        background: black;
+        margin: 4px 0;
+        transition: 0.3s;
+        position:absolute;
+        right: 15px;
+        
+
+     }
+     .main-header .navbar-toggler span:nth-last-child(1){
+        transform: translate(0,0) rotate(45deg);
+     }
+     .main-header .navbar-toggler span:nth-child(2){
+        opacity: 0;
+     }
+      .main-header .navbar-toggler span:nth-last-child(3){
+        transform: translate(0,0) rotate(-45deg);
+     }
+
+
+    
+
+
+
+
 }
