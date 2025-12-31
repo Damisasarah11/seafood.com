@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jaiye Seafoods</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Slide-in animation */
+        .slide-in {
+            animation: slide-in 2s ease-in-out;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+
+        /* Rotating image container */
+        .rotating-image-container {
+            max-width: 100%;
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        /* Rotating image */
+        .rotate {
+            animation: rotate 30s linear infinite;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        /* Pause animation if user prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .rotate {
+                animation: none;
+            }
+        }
+
+        /* === MOBILE FIXES ONLY === */
+        @media (max-width: 991.98px) {
+            /* 1. Fix text: Better spacing, readability, and full-width feel */
+            .slide-in h1 {
+                font-size: 3rem !important;        /* Slightly smaller than display-2 on mobile for better fit */
+                line-height: 1.2;
+            }
+
+            .slide-in p.fs-5 {
+                font-size: 1.1rem !important;     /* Improves readability */
+                line-height: 1.6;
+                padding: 0 1rem;                   /* Adds side padding so text doesn't touch edges */
+            }
+
+            .contact-btn {
+                font-size: 1.1rem;
+                padding: 14px 32px;
+            }
+
+            /* 2. Make image much larger and appealing on mobile */
+            .rotating-image-container {
+                max-width: 92vw;          /* Nearly full width */
+                margin: 3rem auto;        /* Centers and adds breathing room */
+                overflow: visible;
+            }
+
+            .rotate {
+                width: 92vw;              /* Big, bold image on mobile */
+                height: auto;
+                max-width: none;          /* Overrides Bootstrap's 100% limit */
+                border-radius: 50%;
+            }
+        }
+
+        /* Extra tweak for very small phones */
+        @media (max-width: 576px) {
+            .slide-in h1 {
+                font-size: 2.7rem !important;
+            }
+            .rotating-image-container {
+                max-width: 95vw;
+                margin: 2.5rem auto;
+            }
+            .rotate {
+                width: 95vw;
+            }
+        }
+
+        /* Optional button styling (you can customize) */
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .about-span {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<section id="home">
+    <div class="container pt-4">
+        <div class="row align-items-center g-5">
+            <!-- Text Column -->
+            <div class="col-lg-6 text-center text-lg-start slide-in">
+                <h1 class="display-2 fw-bold">Jaiye <span class="about-span">Seafoods</span></h1>
+                <p class="mb-4 fs-5">
+                    Welcome to Jaiye Seafood, where we serve you fresh seafood straight from the deep. Our seafood is top quality and hand-selected daily to ensure unmatched flavor and freshness. From succulent prawns and crisp fish to premium crabs and lobsters, we bring the ocean's finest treasures directly to your table. Dive into a world of exceptional taste, explore our selection today and savor the difference!
+                </p>
+                <a href="#" class="contact-btn">Order Now</a>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="rotating-image-container">
+                    <img src="./assets/seafood 5 main.png" class="img-fluid rotate" alt="Seafood">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
